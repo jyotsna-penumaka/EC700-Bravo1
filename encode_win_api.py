@@ -4,6 +4,10 @@ from IPython.display import display
 import json
 import os.path
 from os import path
+from zipfile import ZipFile
+
+with ZipFile('malware_dataset.zip', 'r') as zipObj:
+   zipObj.extractall()
 
 df = pd.read_csv('malware_dataset/malware_API_dataset.csv',header=None,sep='\n') 
 df = df[0].str.split(',', expand=True)
