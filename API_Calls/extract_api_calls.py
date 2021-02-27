@@ -15,4 +15,4 @@ with open("report.json", "r") as read_file:
 
     if path.exists("apiDict.json"):
         with open('apiDict.json') as json_file: 
-        apiDict = json.load(json_file) 
+            apiDict = json.load(json_file) 
