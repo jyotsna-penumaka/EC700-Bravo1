@@ -1,0 +1,2 @@
+./kClust -i relevant_fasta.txt -s 0 -c 0.3 -d .
+representatives.fas => gives cluster center 
