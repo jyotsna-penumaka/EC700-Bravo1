@@ -10,7 +10,7 @@ with open('apiCallsToLetters.csv', 'r') as read_obj:
     mapping = list(csv_reader)
     i = i+1
 
-df = pd.read_csv('malware_dataset/malware_API_dataset.csv',header=None,sep='\n') 
+df = pd.read_csv('gg.csv',header=None,sep='\n') 
 df = pd.DataFrame(list(zip(["0"],["0"],["0"])), columns=[])
 
 fields = ['malware_class','malware_hash','malware_syscall']  
@@ -19,7 +19,7 @@ with open(filename, 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(fields) 
 
-    df = pd.read_csv('malware_dataset/malware_API_dataset.csv',header=None,sep='\n') 
+    df = pd.read_csv('gg.csv',header=None,sep='\n') 
     df = df[0].str.split(',', expand=True)
     rows = df.shape[0] 
     cols = df.shape[1] 
